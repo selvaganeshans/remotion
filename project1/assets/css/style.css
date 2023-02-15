@@ -1,0 +1,170 @@
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #131313;
+}
+a{
+	text-decoration: none;
+	color: #333;
+}
+p{
+	margin: 0;
+}
+button {
+	margin: 0;
+	padding: 0;
+}
+.notifications{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+.noti-content {
+    max-height: 450px;
+    height: 450px;
+    width: 350px;
+    overflow-y: auto;
+    position: relative;
+    border: 1px solid #d5d5d5;
+	position: relative;	
+	border-radius: 10px;
+}
+ .notification-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.notification-list li {
+    margin-top: 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 14px;
+}
+.notification-list a:hover{
+	background: #eee;
+	color: #555;
+}
+.notiction-action {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 15px;
+    flex-direction: column;
+	transform: translateY(-100%);
+    transition: all 0.5s;
+}
+.notiction-action.show {
+	transform: translateY(0);
+}
+.notiction-action ul {
+    background: #fff;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    border-radius: 10px;
+	overflow: hidden;
+}
+.notiction-action ul li a {
+    padding: 5px;
+    display: block;
+    text-align: center;
+    border-bottom: 1px dashed #d5d5d5;
+    font-size: 14px;
+}
+.notiction-action ul li a:hover{
+	background: #eee;
+}
+.notiction-action ul li:last-child a {
+    border: 0;
+}
+.notification-list li a {
+    display: block;
+    padding: 12px;
+    border-radius: 2px;
+}
+.letter-word span{
+	width: 30px;
+	height: 30px;
+	background: #20c997;
+	color: #fff;
+	border-radius: 50px;
+	margin-right: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.noti-title{
+	font-weight: 700;
+}
+.notification-time{
+	color: #d5d5d5;
+}
+.fake-player i {
+    font-size: 28px;
+    color: #fff;
+}
+.fake-player {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	z-index: 999;
+}
+.fake-player button{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    border: 0.2rem solid #ff0000;
+    border-radius: 50%;
+	color: #fff;
+	background:#ff0000;
+    padding: 15px;
+    height: 70px;
+}
+.pauseset .drop{
+	animation-play-state: paused;
+}
+.play {
+	height: 0;
+	width: 0;
+	background: none;
+	border: none;
+}
+.pause {
+	position: relative;
+	background: none;
+	border: none;
+}
+.pause:before {
+	left: 0;
+}
+.pause:after {
+	right: 0;
+}
+.hidden {
+	display: none !important;
+}
+.drop {
+	position: fixed;
+	top: -10vh;
+	font-size: 1rem;
+	transform:translateY(5px);
+	animation: fall 33s linear forwards;
+}
+@keyframes fall {
+	to {
+		transform: translateY(201vh);
+	}
+}
